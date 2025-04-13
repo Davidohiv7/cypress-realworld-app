@@ -13,8 +13,8 @@ import { Grid, Button, Paper, Typography } from "@mui/material";
 
 import { AuthMachineContext, AuthMachineEvents, AuthMachineSchema } from "../machines/authMachine";
 import { DataContext, DataEvents, DataSchema } from "../machines/dataMachine";
-import BankAccountForm from "../components/BankAccountForm";
 import BankAccountList from "../components/BankAccountList";
+import BankAccountForm from "../features/bankAccounts/components/BankAccountForm";
 
 export interface Props {
   authService: Interpreter<AuthMachineContext, AuthMachineSchema, AuthMachineEvents, any, any>;

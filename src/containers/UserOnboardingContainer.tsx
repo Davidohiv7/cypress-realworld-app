@@ -22,11 +22,11 @@ import { isEmpty } from "lodash/fp";
 import { useActor, useMachine } from "@xstate/react";
 
 import { userOnboardingMachine } from "../machines/userOnboardingMachine";
-import BankAccountForm from "../components/BankAccountForm";
 import { DataContext, DataEvents, DataSchema } from "../machines/dataMachine";
 import { AuthMachineContext, AuthMachineEvents, AuthMachineSchema } from "../machines/authMachine";
 import NavigatorIllustration from "../components/SvgUndrawNavigatorA479";
 import PersonalFinance from "../components/SvgUndrawPersonalFinanceTqcd";
+import BankAccountForm from "../features/bankAccounts/components/BankAccountForm";
 
 export interface Props {
   authService: Interpreter<AuthMachineContext, AuthMachineSchema, AuthMachineEvents, any, any>;
