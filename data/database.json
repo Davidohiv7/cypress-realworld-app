@@ -74,6 +74,17 @@
       "balance": 49474,
       "createdAt": "2023-12-07T04:39:38.383Z",
       "modifiedAt": "2024-03-07T00:07:36.510Z"
+    },
+    {
+      "id": "f2FNXEFh3",
+      "uuid": "5fc2d47b-8267-4fc0-8aeb-0895273adc78",
+      "firstName": "Christian",
+      "lastName": "Vivas",
+      "username": "davidohiv7",
+      "password": "$2a$10$zAO7HRLi4M54G1pv2SxYzuJzX6Sgs4Cc6.NhTHdNtBgyxxUNkgCey",
+      "balance": 0,
+      "createdAt": "2025-04-13T22:23:27.956Z",
+      "modifiedAt": "2025-04-13T22:23:27.956Z"
     }
   ],
   "contacts": [
