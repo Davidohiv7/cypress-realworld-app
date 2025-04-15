@@ -1,21 +1,24 @@
 import React from "react";
-import { TextField } from "@mui/material";
 import { Field, FieldProps } from "formik";
+import { TextField } from "@mui/material";
 
-const ValidatedField: React.FC<{
+interface Props {
   name: string;
   placeholder: string;
   id: string;
-}> = ({ name, placeholder, id }) => (
+  type?: string;
+}
+
+const ValidatedField: React.FC<Props> = ({ name, placeholder, id, type = "text" }) => (
   <Field name={name}>
     {({ field, meta: { touched, error } }: FieldProps) => (
       <TextField
         variant="outlined"
-        margin="dense"
+        margin="normal"
         fullWidth
         required
         id={id}
-        type="text"
+        type={type}
         placeholder={placeholder}
         data-test={id}
         error={Boolean(touched && error)}
