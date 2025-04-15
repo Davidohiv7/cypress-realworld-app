@@ -11,7 +11,6 @@ import {
   LikeNotification,
   CommentNotification,
 } from "../models";
-import { faker } from "@faker-js/faker";
 import Dinero from "dinero.js";
 import {
   flow,
@@ -49,7 +48,7 @@ export const isPayment = negate(isRequestTransaction);
 
 /* istanbul ignore next */
 export const getFakeAmount = (min: number = 1000, max: number = 50000) =>
-  parseInt(faker.finance.amount(min, max), 10);
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 /* istanbul ignore next */
 export const formatAmount = (amount: number) => Dinero({ amount }).toFormat();
