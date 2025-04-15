@@ -1,5 +1,5 @@
 import Form from "./Form";
 import SubmitButton from "./SubmitButton";
-import ValidatedField from "./ValidatedField";
+import FormField from "./FormField";
 
-export { SubmitButton, ValidatedField, Form };
+export { SubmitButton, FormField, Form };

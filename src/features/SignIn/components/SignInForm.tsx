@@ -24,7 +24,7 @@ import {
 import { Alert } from "@mui/material";
 import { SignInPayload } from "../../../models";
 import signInSchema from "../schemas/signInSchema";
-import { ValidatedField } from "../../../shared/components/form";
+import { FormField } from "../../../shared/components/form";
 
 const PREFIX = "SignInForm";
 
@@ -102,8 +102,8 @@ const SignInForm: React.FC<Props> = ({ authService }) => {
         >
           {({ isValid, isSubmitting }) => (
             <Form className={classes.form}>
-              <ValidatedField name="username" placeholder="Username" id="signin-username" />
-              <ValidatedField
+              <FormField name="username" placeholder="Username" id="signin-username" />
+              <FormField
                 name="password"
                 placeholder="Password"
                 id="signin-password"

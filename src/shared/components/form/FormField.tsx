@@ -9,7 +9,7 @@ interface Props {
   type?: string;
 }
 
-const ValidatedField: React.FC<Props> = ({ name, placeholder, id, type = "text" }) => (
+const FormField: React.FC<Props> = ({ name, placeholder, id, type = "text" }) => (
   <Field name={name}>
     {({ field, meta: { touched, error } }: FieldProps) => (
       <TextField
@@ -29,4 +29,4 @@ const ValidatedField: React.FC<Props> = ({ name, placeholder, id, type = "text" 
   </Field>
 );
 
-export default ValidatedField;
+export default FormField;

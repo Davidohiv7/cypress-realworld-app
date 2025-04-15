@@ -4,7 +4,7 @@ import { Grid, Box } from "@mui/material";
 import { Formik } from "formik";
 import { useHistory } from "react-router";
 import { BankAccountPayload, User } from "../../../models";
-import { ValidatedField, SubmitButton, Form } from "../../../shared/components/form";
+import { FormField, SubmitButton, Form } from "../../../shared/components/form";
 import validationSchema from "../schemas/bankAccountFormSchema";
 
 const Wrapper = styled(Box)(({ theme }) => ({
@@ -49,17 +49,13 @@ const BankAccountForm: React.FC<BankAccountFormProps> = ({
       {({ isValid, isSubmitting }) => (
         <Wrapper>
           <Form data-test="bankaccount-form">
-            <ValidatedField
-              name="bankName"
-              placeholder="Bank Name"
-              id="bankaccount-bankName-input"
-            />
-            <ValidatedField
+            <FormField name="bankName" placeholder="Bank Name" id="bankaccount-bankName-input" />
+            <FormField
               name="routingNumber"
               placeholder="Routing Number"
               id="bankaccount-routingNumber-input"
             />
-            <ValidatedField
+            <FormField
               name="accountNumber"
               placeholder="Account Number"
               id="bankaccount-accountNumber-input"
@@ -99,7 +95,7 @@ export default BankAccountForm;
 
 // 5. Moved it to the appropriate features/bankAccounts/components folder.
 
-// 6. Extracted and centralized reusable UI elements — including ValidatedField, SubmitButton, and the styled Form — under shared/components/form, promoting reusability and reducing duplication across the app.
+// 6. Extracted and centralized reusable UI elements — including FormField, SubmitButton, and the styled Form — under shared/components/form, promoting reusability and reducing duplication across the app.
 
 // TO MENTION IN THE INTERVIEW
 // “While I didn’t restructure the whole codebase, this localized refactor serves as a scalable pattern — demonstrating how even small, focused changes can address foundational issues like architecture, naming consistency, and user experience.”
