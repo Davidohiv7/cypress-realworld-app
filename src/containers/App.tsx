@@ -1,4 +1,5 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
+
 import { styled } from "@mui/material/styles";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { useActor, useMachine } from "@xstate/react";
@@ -8,10 +9,10 @@ import { snackbarMachine } from "../machines/snackbarMachine";
 import { notificationsMachine } from "../machines/notificationsMachine";
 import { authService } from "../machines/authMachine";
 import AlertBar from "../components/AlertBar";
-import SignInForm from "../components/SignInForm";
 import SignUpForm from "../components/SignUpForm";
 import { bankAccountsMachine } from "../machines/bankAccountsMachine";
 import PrivateRoutesContainer from "./PrivateRoutesContainer";
+import { SignInForm } from "../features/SignIn/components";
 
 const PREFIX = "App";
 
@@ -64,7 +65,9 @@ const App: React.FC = () => {
             <SignUpForm authService={authService} />
           </Route>
           <Route exact path="/signin">
-            <SignInForm authService={authService} />
+            <Suspense fallback={<></>}>
+              <SignInForm authService={authService} />
+            </Suspense>
           </Route>
           <Route path="/*">
             <Redirect
