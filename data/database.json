@@ -76,15 +76,15 @@
       "modifiedAt": "2024-03-07T00:07:36.510Z"
     },
     {
-      "id": "f2FNXEFh3",
-      "uuid": "5fc2d47b-8267-4fc0-8aeb-0895273adc78",
+      "id": "NieoSc5GP",
+      "uuid": "9a8066f6-bd86-4325-87a3-0e0ee343b069",
       "firstName": "Christian",
       "lastName": "Vivas",
-      "username": "davidohiv7",
-      "password": "$2a$10$zAO7HRLi4M54G1pv2SxYzuJzX6Sgs4Cc6.NhTHdNtBgyxxUNkgCey",
+      "username": "chris",
+      "password": "$2a$10$lQAwTeg.rr7zsBJO7yg.7eqgKh3hWg82stjTMsq6eVtbqyX0G.ROq",
       "balance": 0,
-      "createdAt": "2025-04-13T22:23:27.956Z",
-      "modifiedAt": "2025-04-13T22:23:27.956Z"
+      "createdAt": "2025-04-16T01:45:09.284Z",
+      "modifiedAt": "2025-04-16T01:45:09.284Z"
     }
   ],
   "contacts": [
@@ -264,6 +264,17 @@
       "isDeleted": false,
       "createdAt": "2024-01-26T14:01:01.815Z",
       "modifiedAt": "2024-03-07T08:44:31.174Z"
+    },
+    {
+      "id": "4lah0ta8O",
+      "uuid": "559ee565-6af4-4300-b150-ef6f208fb003",
+      "userId": "NieoSc5GP",
+      "bankName": "Davivienda",
+      "accountNumber": "324234234",
+      "routingNumber": "423423422",
+      "isDeleted": false,
+      "createdAt": "2025-04-16T01:45:28.524Z",
+      "modifiedAt": "2025-04-16T01:45:28.524Z"
     }
   ],
   "transactions": [

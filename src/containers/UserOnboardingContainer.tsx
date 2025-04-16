@@ -70,46 +70,63 @@ const UserOnboardingContainer: React.FC<Props> = ({ authService, bankAccountsSer
   };
 
   return (
-    <Dialog data-test="user-onboarding-dialog" fullScreen={fullScreen} open={dialogIsOpen}>
+    <Dialog
+      data-test="user-onboarding-dialog"
+      fullScreen={fullScreen}
+      open={dialogIsOpen}
+      PaperProps={{
+        sx: {
+          width: {
+            xs: "95%",
+            sm: 600,
+          },
+
+          height: {
+            xs: "80%",
+            sm: 400,
+          },
+        },
+      }}
+    >
       <DialogTitle data-test="user-onboarding-dialog-title">
         {userOnboardingState.matches("stepOne") && "Get Started with Real World App"}
         {userOnboardingState.matches("stepTwo") && "Create Bank Account"}
         {userOnboardingState.matches("stepThree") && "Finished"}
       </DialogTitle>
       <DialogContent data-test="user-onboarding-dialog-content">
-        <Box display="flex" alignItems="center" justifyContent="center">
-          {userOnboardingState.matches("stepOne") && (
-            <>
-              <NavigatorIllustration />
+        {userOnboardingState.matches("stepOne") && (
+          <Box sx={{ display: "flex", alignItems: "center", height: "100%" }}>
+            <NavigatorIllustration />
+            <br />
+            <DialogContentText style={{ paddingLeft: 20 }}>
+              Real World App requires a Bank Account to perform transactions.
               <br />
-              <DialogContentText style={{ paddingLeft: 20 }}>
-                Real World App requires a Bank Account to perform transactions.
-                <br />
-                <br />
-                Click <b>Next</b> to begin setup of your Bank Account.
-              </DialogContentText>
-            </>
-          )}
-          {userOnboardingState.matches("stepTwo") && (
+              <br />
+              Click <b>Next</b> to begin setup of your Bank Account.
+            </DialogContentText>
+          </Box>
+        )}
+        {userOnboardingState.matches("stepTwo") && (
+          <Box paddingRight={8}>
             <BankAccountForm
               userId={currentUser?.id!}
               createBankAccount={createBankAccountWithNextStep}
               onboarding
             />
-          )}
-          {userOnboardingState.matches("stepThree") && (
-            <>
-              <PersonalFinance />
+          </Box>
+        )}
+        {userOnboardingState.matches("stepThree") && (
+          <>
+            <PersonalFinance />
+            <br />
+            <DialogContentText style={{ paddingLeft: 20 }}>
+              You're all set!
               <br />
-              <DialogContentText style={{ paddingLeft: 20 }}>
-                You're all set!
-                <br />
-                <br />
-                We're excited to have you aboard the Real World App!
-              </DialogContentText>
-            </>
-          )}
-        </Box>
+              <br />
+              We're excited to have you aboard the Real World App!
+            </DialogContentText>
+          </>
+        )}
       </DialogContent>
       <DialogActions>
         <Grid container justifyContent="space-between">

@@ -18,11 +18,12 @@ const FormField: React.FC<Props> = ({ name, placeholder, id, type = "text" }) =>
         fullWidth
         required
         id={id}
+        sx={{ margin: "0.5rem" }}
         type={type}
         placeholder={placeholder}
         data-test={id}
         error={Boolean(touched && error)}
-        helperText={touched && error}
+        helperText={touched ? error || " " : " "}
         {...field}
       />
     )}

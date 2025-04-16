@@ -5,8 +5,6 @@ function SvgUndrawNavigatorA479(props: any) {
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="886.35125"
-      height="491.63114"
       viewBox="0 0 886.351 491.631"
       {...props}
     >

@@ -8,10 +8,10 @@ import { FormField, SubmitButton, Form } from "../../../shared/components/form";
 import validationSchema from "../schemas/bankAccountFormSchema";
 
 const Wrapper = styled(Box)(({ theme }) => ({
-  marginTop: theme.spacing(8),
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  width: "100%",
 }));
 
 export interface BankAccountFormProps {

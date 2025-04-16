@@ -24,14 +24,15 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         input: {
-          padding: "6px 0 7px",
+          padding: "0.5rem",
         },
       },
     },
     MuiInputBase: {
       styleOverrides: {
         input: {
-          padding: "6px 0 7px",
+          padding: "0.5rem 1rem",
+          margin: 0,
         },
       },
     },
